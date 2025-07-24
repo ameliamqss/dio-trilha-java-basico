@@ -1,4 +1,7 @@
-import java.util.list;
+
+import java.util.List;
+import java.util.ArrayList;
+
 
 public class ListaTarefas {
     private List<Tarefa> tarefalist;
@@ -27,5 +30,23 @@ public class ListaTarefas {
 
     public void obterDescricoesTarefas(){
         System.out.println(tarefalist);
+    }
+
+    public static void main(String[] args) {
+        ListaTarefas listatarefas= new ListaTarefas();
+
+        System.out.println("O número de tarefas é: " + listatarefas.obterNumeroTotalTarefas());
+
+        listatarefas.adicionarTarefa("Tarefa 1");
+        listatarefas.adicionarTarefa("Tarefa 1");
+        listatarefas.adicionarTarefa("Tarefa 3");
+
+         System.out.println("O número de tarefas é: " + listatarefas.obterNumeroTotalTarefas());
+
+        listatarefas.removerTarefa("Tarefa 3");
+
+         System.out.println("O número de tarefas é: " + listatarefas.obterNumeroTotalTarefas());
+
+         listatarefas.obterDescricoesTarefas();
     }
 }
